@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahihi đồ chó</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid rgb(109, 14, 14);
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body style="width: 7000px;margin-left: 500px;">
+    <h1>À THẾ À</h1>
+    <form action="/search" method="post">
+        Name <input type="text" name="txtName"/>
+        <input type="submit" value="Search">
+    </form>
+    <br>
+    <img src="https://s.memehay.com/files/posts/20200811/c58c7de0a1e16e3e6e8df92b5c0a8ec8thang-be-noi-a-the-a.jpg"width="300px" />
+    <br>
+    <a href="/insert"> <input type="submit" value="New Product À THẾ À"></a>
+    <ul>
+        {{#each model}} 
+        <li>{{name}} - {{price}} - <a href="/delete?id={{_id}}">Delete</a> - <a href="/edit?id={{_id}}">Edit</a></li>
+        {{/each}}
+    </ul>
+
+
+</body>
+
+</html>
